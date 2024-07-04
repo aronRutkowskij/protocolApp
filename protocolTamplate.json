@@ -1,0 +1,52 @@
+{
+  "bag1":{
+    "name":"1",
+    "type":"Werkzeugtasche",
+    "modell":"Parkside",
+    "get":{
+      "date1":"01.01.2024",
+      "date2":"01.01.2024",
+      "techniker1":"some name",
+      "techniker1_signature":"",
+      "techniker2":"other name",
+      "techniker2_signature":"",
+      "tools":[
+        {
+          "name":"Schraubendreher",
+          "modell":"Parkside",
+          "menge":1,
+          "isThere":true
+        },
+        {
+          "name":"Zange",
+          "modell":"Parkside",
+          "menge":1,
+          "isThere":true
+        }
+      ]
+    },
+    "give_back":{
+      "date1":"01.01.2024",
+      "date2":"01.01.2024",
+      "techniker1":"some name",
+      "techniker1_signature":"",
+      "techniker2":"other name",
+      "techniker2_signature":"",
+      "tools":[
+        {
+          "name":"Schraubendreher",
+          "modell":"Parkside",
+          "menge":1,
+          "isThere":true
+        },
+        {
+          "name":"Zange",
+          "modell":"Parkside",
+          "menge":1,
+          "isThere":true
+        }
+      ]
+    }
+  }
+}
+
