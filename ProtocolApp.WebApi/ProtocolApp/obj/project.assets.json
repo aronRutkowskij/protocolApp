@@ -4071,11 +4071,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/ProtocolApp/ProtocolApp.csproj",
+      "projectUniqueName": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/ProtocolApp/ProtocolApp.csproj",
       "projectName": "ProtocolApp",
-      "projectPath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/ProtocolApp/ProtocolApp.csproj",
+      "projectPath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/ProtocolApp/ProtocolApp.csproj",
       "packagesPath": "/Users/aron/.nuget/packages/",
-      "outputPath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/ProtocolApp/obj/",
+      "outputPath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/ProtocolApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aron/.nuget/NuGet/NuGet.Config"
@@ -4091,8 +4091,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/DataAccess.EFCore/DataAccess.EFCore.csproj": {
-              "projectPath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/DataAccess.EFCore/DataAccess.EFCore.csproj"
+            "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/DataAccess.EFCore.csproj": {
+              "projectPath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/DataAccess.EFCore.csproj"
             }
           }
         }

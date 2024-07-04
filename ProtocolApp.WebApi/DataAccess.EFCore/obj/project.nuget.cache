@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MRG7CGCcRnnICwybZYcOt7OhrJlL/ID7UZSnglgG5qEmcXv8fK9UItiBmKLSDfRvRMOUXKgD9umdwSucw0Dgvg==",
+  "dgSpecHash": "YGIhKxNYdYCnQVhqhSmEEuxPU0/Q2Q9exZkd59KQdLisy0ZBSNNopscYHRsI9zMPzV+JedFOHbzTcWK+StaECA==",
   "success": true,
-  "projectFilePath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/DataAccess.EFCore/DataAccess.EFCore.csproj",
+  "projectFilePath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/DataAccess.EFCore.csproj",
   "expectedPackageFiles": [
     "/Users/aron/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/aron/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

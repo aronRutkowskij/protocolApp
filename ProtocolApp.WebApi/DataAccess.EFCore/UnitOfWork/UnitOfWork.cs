@@ -12,8 +12,9 @@ public class UnitOfWork : IUnitOfWork
     }
 
     public IBagRepo Bag { get; }
-    public IProtocolRepo Protocol { get; }
-    
+    public IDocumentRepo Document { get; }
+    public ITechnikerRepo Techniker { get; }
+
     public async Task<int> Complete()
     {
         return await _context.SaveChangesAsync();

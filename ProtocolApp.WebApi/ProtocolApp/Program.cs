@@ -21,6 +21,7 @@ namespace Onboarding
                 {
                     var context = services.GetRequiredService<ApplicationContext>();
                     context.Database.Migrate();
+                    context.CreateDefaultRecords();
                 }
                 catch (Exception ex)
                 {
@@ -87,8 +88,6 @@ namespace Onboarding
             #region Repositories
 
             services.AddTransient(typeof(IGenericRepo<>), typeof(GenericRepo<>));
-            services.AddTransient<IBagRepo, BagRepo>();
-            services.AddTransient<IProtocolRepo, ProtocolRepo>();
 
             #endregion
 

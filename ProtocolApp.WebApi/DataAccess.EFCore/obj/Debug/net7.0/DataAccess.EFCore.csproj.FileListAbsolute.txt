@@ -1,0 +1,15 @@
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/bin/Debug/net7.0/DataAccess.EFCore.deps.json
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/bin/Debug/net7.0/DataAccess.EFCore.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/bin/Debug/net7.0/DataAccess.EFCore.pdb
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/bin/Debug/net7.0/Domain.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/bin/Debug/net7.0/Domain.pdb
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.csproj.AssemblyReference.cache
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.AssemblyInfoInputs.cache
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.AssemblyInfo.cs
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.csproj.CoreCompileInputs.cache
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.csproj.CopyComplete
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/refint/DataAccess.EFCore.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/DataAccess.EFCore.pdb
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/DataAccess.EFCore/obj/Debug/net7.0/ref/DataAccess.EFCore.dll

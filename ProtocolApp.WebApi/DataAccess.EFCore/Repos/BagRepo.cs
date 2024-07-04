@@ -1,11 +1,6 @@
-using Domain.Entities;
-using Domain.Interfaces;
-
 namespace DataAccess.EFCore.Repos;
 
-public class BagRepo : GenericRepo<Bag>, IBagRepo
+public class BagRepo
 {
-    public BagRepo(ApplicationContext context) : base(context)
-    {
-    }
+    
 }

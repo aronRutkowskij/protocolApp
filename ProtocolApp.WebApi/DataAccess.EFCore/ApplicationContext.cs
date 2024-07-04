@@ -9,6 +9,18 @@ public class ApplicationContext : DbContext
     {
     }
     
+    public DbSet<Document> Document { get; set; }
+    public DbSet<Techniker> Techniker { get; set; }
     public DbSet<Bag> Bag { get; set; }
-    public DbSet<Protocol> Protocol { get; set; }
+
+    public void CreateDefaultRecords()
+    {
+    }
 }
+
+
+
+
+
+
+

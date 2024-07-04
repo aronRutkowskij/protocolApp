@@ -2,7 +2,8 @@ namespace Domain.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {
+    IDocumentRepo Document { get; }
     IBagRepo Bag { get; }
-    IProtocolRepo Protocol { get; }
+    ITechnikerRepo Techniker { get; }
     Task<int> Complete();
 }

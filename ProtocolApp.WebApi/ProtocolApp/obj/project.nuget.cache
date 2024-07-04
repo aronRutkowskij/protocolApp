@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vAHQqrTQBcFgEeqnr62/iqOOwoHm3jP9rYBR/Fo4qKbx6v5A75s7IX4dV9NwaalnDUfUa3DFyP0Vv4dRu2KLTw==",
+  "dgSpecHash": "UFyJy/sDGRGVnrfbIS0FQAyh6OXconTW3dXezthBL8/O4vad9TPmE/IpTFE2SVhEh0hpHXkeKlxBpierUfcpPg==",
   "success": true,
-  "projectFilePath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/ProtocolApp/ProtocolApp.csproj",
+  "projectFilePath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/ProtocolApp/ProtocolApp.csproj",
   "expectedPackageFiles": [
     "/Users/aron/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/aron/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

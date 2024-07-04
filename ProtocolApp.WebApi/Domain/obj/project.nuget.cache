@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b/kmpSPjcE+2ZnDmo8UEkjR6gHZ5YSu/zfYhMgntNPVSrN15zHfhPpPBGvrR4AGU9lcKf4/gMsOHmJ1F99qkQw==",
+  "dgSpecHash": "Rss4mc8+PmoNW9uXQ9hZn5CTUjJnpZYhveA4AZ4Y5DYN+IfC/6Tl61SDyGZZF9afCBInFf21Bs8DkgosZV8zPw==",
   "success": true,
-  "projectFilePath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/Domain/Domain.csproj",
+  "projectFilePath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/Domain.csproj",
   "expectedPackageFiles": [
     "/Users/aron/.nuget/packages/fsharp.core/8.0.200/fsharp.core.8.0.200.nupkg.sha512",
     "/Users/aron/.nuget/packages/microsoft.entityframeworkcore/7.0.0/microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

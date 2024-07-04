@@ -1050,11 +1050,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/Domain/Domain.csproj",
+      "projectPath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/Domain.csproj",
       "packagesPath": "/Users/aron/.nuget/packages/",
-      "outputPath": "/Users/aron/Documents/Projects/ProtocolApp/ProtocolApp.WebApi/Domain/obj/",
+      "outputPath": "/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aron/.nuget/NuGet/NuGet.Config"

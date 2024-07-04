@@ -1,0 +1,12 @@
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/bin/Debug/net7.0/Domain.deps.json
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/bin/Debug/net7.0/Domain.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/bin/Debug/net7.0/Domain.pdb
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/refint/Domain.dll
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/Domain.pdb
+/Users/aron/Documents/Projects/ProtocolApp/protocolApp/ProtocolApp.WebApi/Domain/obj/Debug/net7.0/ref/Domain.dll

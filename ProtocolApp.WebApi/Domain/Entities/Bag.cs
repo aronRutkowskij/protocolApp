@@ -1,6 +1,15 @@
+using Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 namespace Domain.Entities;
 
-public class Bag
+public class Bag : IConfigurable
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
+    public string BagData { get; set; }
+    public void Configure(ModelBuilder modelBuilder)
+    {
+        var bag = modelBuilder.Entity<Bag>()
+            .HasKey(x => x.Id);
+    }
 }
