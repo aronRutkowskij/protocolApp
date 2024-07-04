@@ -15,6 +15,34 @@ public class ApplicationContext : DbContext
 
     public void CreateDefaultRecords()
     {
+        if (!Techniker.Any())
+        {
+            string[] names =
+            {
+                "Adrian Pricaz",
+                "Bent Breuel",
+                "Dennys Friedrichsen",
+                "Enno Kauker",
+                "Fabian Briedis",
+                "Finn Steenbuck",
+                "Fredy Castro",
+                "Jona Krekeler",
+                "Lasse Harms",
+                "Marco Krekeler",
+                "Matthias Baumann",
+                "Maurice Kraemer"
+            };
+
+            for (int i = 0; i < names.Length; i++)
+            {
+                var t = new Techniker()
+                {
+                    Name = names[i],
+                };
+                Techniker.Add(t);
+                SaveChanges();
+            }
+        }
     }
 }
 
