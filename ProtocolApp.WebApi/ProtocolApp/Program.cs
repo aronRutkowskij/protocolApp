@@ -88,6 +88,9 @@ namespace Onboarding
             #region Repositories
 
             services.AddTransient(typeof(IGenericRepo<>), typeof(GenericRepo<>));
+            services.AddTransient<IBagRepo, BagRepo>();
+            services.AddTransient<IDocumentRepo, DocumentRepo>();
+            services.AddTransient<ITechnikerRepo, TechnikerRepo>();
 
             #endregion
 
