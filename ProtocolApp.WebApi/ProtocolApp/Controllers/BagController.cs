@@ -40,6 +40,15 @@ public class BagController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName("getbyid")]
+    public async Task<IActionResult> GetById()
+    {
+        long bagid = long.Parse(Request.Form["id"]);
+        var bag = _unitOfWork.Bag.GetById(bagid);
+        return Ok(bag);
+    }
+    
+    [HttpPost]
     [ActionName("delete")]
     public async Task<IActionResult> Delete()
     {

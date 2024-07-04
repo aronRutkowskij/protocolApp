@@ -23,6 +23,15 @@ public class DocumentController : ControllerBase
         var documents = _unitOfWork.Document.GetAll();
         return Ok(documents);
     }
+    
+    [HttpPost]
+    [ActionName("getbyid")]
+    public async Task<IActionResult> GetById()
+    {
+        long id = long.Parse(Request.Form["id"]);
+        var doc = _unitOfWork.Document.GetById(id);
+        return Ok(doc);
+    }
 
     [HttpPost]
     [ActionName("add")]
