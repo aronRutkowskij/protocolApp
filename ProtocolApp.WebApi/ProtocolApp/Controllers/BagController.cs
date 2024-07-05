@@ -37,10 +37,12 @@ public class BagController : ControllerBase
     public async Task<IActionResult> Add()
     {
         string data = Request.Form["jsondata"].ToString();
+        Console.WriteLine("data = {0}", data);
         var bag = new Bag
         {
             BagData = data
         };
+        Console.WriteLine("bag = {0}", bag.BagData);
         _unitOfWork.Bag.Add(bag);
         await _unitOfWork.Complete();
         

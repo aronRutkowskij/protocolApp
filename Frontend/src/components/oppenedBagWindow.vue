@@ -73,8 +73,10 @@
 import oneInputRow from "./oneInputRow.vue";
 import signature from "./signature.vue";
 import CustomInput from "./CustomInput.vue";
+
 const props = defineProps({ selectedBag: Number });
 const emits = defineEmits(["closeWindow"]);
+
 </script>
 <style scoped>
 select {

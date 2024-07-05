@@ -7,17 +7,31 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import addNewBag from "../components/addNewBag.vue";
 import oneBag from "../components/oneBag.vue";
 import oppenedBagWindow from '../components/oppenedBagWindow.vue'
 
+import * as fetchus from "../fetchusMaximus";
+import pathconfig from "../pathconfig.json";
+
+import protocolTemplate from "../protocolTamplate.json";
+
 const isBagSelected = ref(false)
 const selectedBagNumber =ref(0)
+const bags = ref([]);
 
 const openBag=(number)=>{
   isBagSelected.value=true
 selectedBagNumber.value=number
 }
 
+const getBags = async () => {
+  bags.value = await fetchus.postfetch(pathconfig.server + pathconfig.getbag);
+  console.log("bags", bags.value);
+}
+
+onMounted(async () => {
+  await getBags();
+})
 </script>

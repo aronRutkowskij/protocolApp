@@ -1,0 +1,8 @@
+{
+  "server":"http://localhost:5070/protocolapp/",
+  "getbag":"bag/getdefault",
+  "updatebag":"bag/update",
+  "getdocs":"document/getall",
+  "uploaddoc":"document/add",
+  "gettechniker":"techniker/getall"
+}
