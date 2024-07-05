@@ -40,6 +40,18 @@ public class BagController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName("update")]
+    public async Task<IActionResult> Update()
+    {
+        string data = Request.Form["jsondata"].ToString();
+        var bag = _unitOfWork.Bag.GetById(1);
+        bag.BagData = data;
+        await _unitOfWork.Complete();
+        
+        return Ok(bag);
+    }
+    
+    [HttpPost]
     [ActionName("getbyid")]
     public async Task<IActionResult> GetById()
     {
