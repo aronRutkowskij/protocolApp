@@ -34,4 +34,13 @@ const getBags = async () => {
 onMounted(async () => {
   await getBags();
 })
+
+const addbag = async () => {
+  const b = ref([]);
+  b.value = protocolTemplate;
+  const formdata = new FormData();
+  formdata.append("jsondata", JSON.stringify(b.value));
+  const added = await fetchus.postfetch("http://localhost:5070/protocolapp/bag/add", formdata);
+  console.log("added", added);
+}
 </script>
