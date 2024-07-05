@@ -25,6 +25,14 @@ public class BagController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName("getdefault")]
+    public async Task<IActionResult> GetDefault()
+    {
+        var bag = _unitOfWork.Bag.GetById(1);
+        return Ok(bag);
+    }
+    
+    [HttpPost]
     [ActionName("add")]
     public async Task<IActionResult> Add()
     {
