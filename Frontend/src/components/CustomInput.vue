@@ -12,6 +12,7 @@
         :type="type"
         min="0"
         :placeholder="placeholder"
+        :value="inputValue"
         @input="$emit('update:modelValue', $event.target.value)"
         class="flex placeholder:text-text/40 outline-none indent-2 px-2 p-1 w-full rounded-md bg-sec cursor-text"
         :name="name"
@@ -53,6 +54,7 @@ const props = defineProps({
   name: String,
   inputTitle: String,
   checkBoxMsg: String,
+  inputValue:String
 });
 defineEmits(["update:modelValue"]);
 </script>

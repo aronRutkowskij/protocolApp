@@ -27,7 +27,7 @@
 
         </div>
           <!-- put there the value of INCHECK and rows from BagList-->
-        <oneInputRow v-for="item in 1" :key="item" :inCheck="true"/>
+        <oneInputRow v-for="item in props.bagData.get.tools" :key="item" :inputList="item" :inCheck="true"/>
       </div>
     </div>
     <div id="checkContainer" class="flex flex-wrap justify-center  gap-4 w-full">
@@ -74,8 +74,11 @@ import oneInputRow from "./oneInputRow.vue";
 import signature from "./signature.vue";
 import CustomInput from "./CustomInput.vue";
 
-const props = defineProps({ selectedBag: Number });
+const props = defineProps({ selectedBag: Number,bagData:Object });
 const emits = defineEmits(["closeWindow"]);
+
+console.log("tetet",props.bagData);
+console.log("sadas",props.bagData.get.tools);
 
 </script>
 <style scoped>
