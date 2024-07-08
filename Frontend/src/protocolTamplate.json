@@ -1,6 +1,6 @@
 {
   "bag1":{
-    "name":"1",
+    "name":1,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
     "get":{
@@ -145,7 +145,7 @@
     }
   },
   "bag2":{
-    "name":"2",
+    "name":2,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
     "get":{
@@ -290,7 +290,7 @@
     }
   },
   "bag3":{
-    "name":"2",
+    "name":3,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
     "get":{
@@ -435,7 +435,7 @@
     }
   },
   "bag4":{
-    "name":"2",
+    "name":4,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
     "get":{

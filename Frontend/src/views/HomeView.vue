@@ -14,6 +14,7 @@
       v-if="isBagSelected"
       :selectedBag="selectedBagNumber"
       :bagData="selectedBagData"
+      :techniker="techniker"
       @closeWindow="isBagSelected = false"
     />
   </div>
@@ -34,6 +35,7 @@ const isBagSelected = ref(false);
 const selectedBagNumber = ref(0);
 const bags = ref([]);
 const selectedBagData = ref({});
+const techniker = ref([]);
 
 const newbag = {
   bag5: {
@@ -184,7 +186,6 @@ const newbag = {
 };
 
 const openBag = (number) => {
-  isBagSelected.value = true;
   selectedBagNumber.value = number + 1;
   console.log("bags", bags.value);
   
@@ -201,17 +202,35 @@ const openBag = (number) => {
     }
   }
   console.log("selected bag", selectedBagData.value);
+  isBagSelected.value = true;
 };
 
 const getBags = async () => {
   bags.value = await fetchus.postfetch(pathconfig.server + pathconfig.getbag);
+  console.log("bags", bags.value);
   bags.value = JSON.parse(bags.value.bagData);
 };
 
+const getTechniker = async () => {
+  techniker.value = await fetchus.postfetch(pathconfig.server + pathconfig.gettechniker);
+  console.log("techinker", techniker.value);
+}
+
 onMounted(async () => {
   await getBags();
-  // addbag();
+  await getTechniker();
+  // // addbag();
+  // await addInitialBag();
 });
+
+const addInitialBag = async () => {
+  const b = ref([]);
+  b.value = protocolTemplate;
+  const formdata = new FormData();
+  formdata.append("jsondata", JSON.stringify(b.value));
+  const added = await fetchus.postfetch("http://localhost:5070/protocolapp/bag/add", formdata);
+  console.log("added", added);
+}
 
 const addbag = () => {
   console.log("bags", JSON.parse(bags.value.bagData));

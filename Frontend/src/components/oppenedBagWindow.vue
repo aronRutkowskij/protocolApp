@@ -23,23 +23,30 @@
           <span class="w-full px-2 min-w-[10rem]">Werkzeug</span>
           <span class="w-full px-2 min-w-[10rem]">Marke/Modell</span>
           <!-- put there the value of INCHECK -->
-          <span v-if="true" class="w-[10rem] px-2 min-w-[10rem] text-right">Ist vorhanden?</span>
-
+          <span v-if="true" class="w-[10rem] px-2 min-w-[10rem] text-right"
+            >Ist vorhanden?</span
+          >
         </div>
-          <!-- put there the value of INCHECK and rows from BagList-->
-        <oneInputRow v-for="item in props.bagData.get.tools" :key="item" :inputList="item" :inCheck="true"/>
+        <!-- put there the value of INCHECK and rows from BagList-->
+        <oneInputRow
+          v-for="item in props.bagData.get.tools"
+          :key="item"
+          :inputList="item"
+          :inCheck="true"
+        />
       </div>
     </div>
-    <div id="checkContainer" class="flex flex-wrap justify-center  gap-4 w-full">
+    <div id="checkContainer" class="flex flex-wrap justify-center gap-4 w-full">
       <div id="Empfanger" class="flex flex-col gap-4 p-4">
         <div class="flex w-full gap-4">
           <div>
             <span class="text-xs">Empfänger</span>
             <select
-              id="names"
+              id="techniker1"
+              @change="technikerChanged"
               class="flex placeholder:text-text/40 outline-none indent-2 px-2 p-1 w-[28rem] rounded-md bg-sec cursor-text"
             >
-              <option v-for="item in 12" :key="item">Volvo</option>
+              <option v-for="item in props.techniker" :key="item.name" :value="item.name">{{ item.name }}</option>
             </select>
           </div>
           <div class="w-[12rem]">
@@ -53,10 +60,11 @@
           <div>
             <span class="text-xs">Kontrolleur</span>
             <select
-              id="names"
+              id="techniker2"
+              @change="technikerChanged"
               class="flex placeholder:text-text/40 outline-none indent-2 px-2 p-1 w-[28rem] rounded-md bg-sec cursor-text"
             >
-              <option v-for="item in 12" :key="item">Volvo</option>
+              <option v-for="item in props.techniker" :key="item.name" :value="item.name" >{{ item.name }}</option>
             </select>
           </div>
           <div class="w-[12rem]">
@@ -70,16 +78,36 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import oneInputRow from "./oneInputRow.vue";
 import signature from "./signature.vue";
 import CustomInput from "./CustomInput.vue";
 
-const props = defineProps({ selectedBag: Number,bagData:Object });
+const props = defineProps({
+  selectedBag: Number,
+  bagData: Object,
+  techniker: Object,
+});
 const emits = defineEmits(["closeWindow"]);
 
-console.log("tetet",props.bagData);
-console.log("sadas",props.bagData.get.tools);
+const techniker1 = ref("");
+const techniker2 = ref("");
 
+function setT1(t) {
+  
+}
+
+function setT2(t) {
+
+}
+
+function technikerChanged() {
+  console.log("t1", document.getElementById('techniker1').value);
+  console.log("t2", document.getElementById('techniker2').value);
+}
+
+// console.log("tetet", props.bagData);
+// console.log("sadas", props.bagData.get.tools);
 </script>
 <style scoped>
 select {
