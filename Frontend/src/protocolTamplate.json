@@ -3,6 +3,7 @@
     "name":1,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
+    "inCompany": true,
     "get":{
       "date1":"01.01.2024",
       "date2":"01.01.2024",
@@ -148,6 +149,7 @@
     "name":2,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
+    "inCompany": true,
     "get":{
       "date1":"01.01.2024",
       "date2":"01.01.2024",
@@ -293,6 +295,7 @@
     "name":3,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
+    "inCompany": true,
     "get":{
       "date1":"01.01.2024",
       "date2":"01.01.2024",
@@ -438,6 +441,7 @@
     "name":4,
     "type":"Werkzeugtasche",
     "modell":"Parkside",
+    "inCompany": true,
     "get":{
       "date1":"01.01.2024",
       "date2":"01.01.2024",

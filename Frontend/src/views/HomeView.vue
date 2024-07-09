@@ -5,17 +5,19 @@
   >
     <oneBag
       v-for="(item, index, count) in bags"
-      :isFree="true"
+      :inCompany="item.inCompany"
       :caseNumber="item.name"
       @click="openBag(count)"
     />
-    <addNewBag v-if="!isBagSelected" />
+    <addNewBag v-if="!isBagSelected" @click="addbag" />
     <oppenedBagWindow
       v-if="isBagSelected"
       :selectedBag="selectedBagNumber"
       :bagData="selectedBagData"
       :techniker="techniker"
       @closeWindow="isBagSelected = false"
+      @saveAll="saveAll"
+      @deleteBag="deleteBag"
     />
   </div>
 </template>
@@ -39,15 +41,16 @@ const techniker = ref([]);
 
 const newbag = {
   bag5: {
-    name: "5",
+    name: 5,
     type: "Werkzeugtasche",
     modell: "Parkside",
+    inCompany: true,
     get: {
-      date1: "01.01.2024",
-      date2: "01.01.2024",
-      techniker1: "some name",
+      date1: "",
+      date2: "",
+      techniker1: "",
       techniker1_signature: "",
-      techniker2: "other name",
+      techniker2: "",
       techniker2_signature: "",
       tools: [
         {
@@ -113,11 +116,11 @@ const newbag = {
       ],
     },
     give_back: {
-      date1: "01.01.2024",
-      date2: "01.01.2024",
-      techniker1: "some name",
+      date2: "",
+      date1: "",
+      techniker1: "",
       techniker1_signature: "",
-      techniker2: "other name",
+      techniker2: "",
       techniker2_signature: "",
       tools: [
         {
@@ -216,11 +219,23 @@ const getTechniker = async () => {
   console.log("techinker", techniker.value);
 }
 
+const deleteBag = async () => {
+  console.log("delete bag");
+  isBagSelected.value = false;
+}
+
+const saveAll = async () => {
+  const formdata = new FormData();
+  formdata.append("jsondata", JSON.stringify(bags.value));
+  const save = await fetchus.postfetch(pathconfig.server + pathconfig.updatebag, formdata);
+  console.log("saved", save);
+
+  isBagSelected.value = false;
+}
+
 onMounted(async () => {
   await getBags();
   await getTechniker();
-  // // addbag();
-  // await addInitialBag();
 });
 
 const addInitialBag = async () => {
@@ -232,9 +247,18 @@ const addInitialBag = async () => {
   console.log("added", added);
 }
 
-const addbag = () => {
-  console.log("bags", JSON.parse(bags.value.bagData));
-  bags.value.bagData = { ...JSON.parse(bags.value.bagData), ...newbag };
-  console.log("bags", bags.value.bagData);
+const addbag = async () => {
+  let counter = 1;
+  for (const key in bags.value) {
+    if (bags.value.hasOwnProperty(key)) {
+      counter++;
+    }
+  }
+  newbag.bag5.name = counter;
+  console.log("newbag", newbag);
+  console.log("bags1", JSON.parse(JSON.stringify(bags.value)));
+  bags.value = { ...JSON.parse(JSON.stringify(bags.value)), ...newbag };
+  console.log("bags with added", bags.value);
+  await saveAll();
 };
 </script>
