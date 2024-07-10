@@ -19,6 +19,14 @@
       <font-awesome-icon icon="fa-solid fa-trash-can" />
     </div>
   </div>
+    <div id="bagInfoContainer" class="flex justify-center items-center w-full p-4">
+      <div class="flex flex-row justify-between items-start w-full min-w-max gap-4 rounded-lg p-4 border-4 border-container">
+        <span>Information zur Werkzeugtasche</span>
+        <CustomInput type="text" v-model="props.bagData.type" :inputValue="props.bagData.type" :inputTitle="'Typ:'" />
+        <CustomInput type="text" v-model="props.bagData.modell" :inputValue="props.bagData.modell" :inputTitle="'Marke:'" />
+        <CustomInput type="number" v-model="props.bagData.name" :inputValue="props.bagData.name" :inputTitle="'Taschennummer:'" />
+      </div>
+    </div>
     <div id="listContainer" class="flex w-full h-[30rem] p-4 pt-0">
       <div
         id="container"
