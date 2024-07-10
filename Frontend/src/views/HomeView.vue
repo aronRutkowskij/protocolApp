@@ -35,6 +35,7 @@ import protocolTemplate from "../protocolTamplate.json";
 
 const isBagSelected = ref(false);
 const selectedBagNumber = ref(0);
+const selectedBagKey = ref();
 const bags = ref([]);
 const selectedBagData = ref({});
 const techniker = ref([]);
@@ -198,10 +199,11 @@ const openBag = (number) => {
     if (bags.value.hasOwnProperty(key)) {
       if (counter == number) {
         selectedBagData.value = bags.value[key];
+        selectedBagKey.value = key;
       }
       counter++;
       // console.log(key); // bag1, bag2, bag3, bag4
-      console.log(bags.value[key]); // bag1 data, bag2 data, etc.
+      // console.log(bags.value[key]); // bag1 data, bag2 data, etc.
     }
   }
   console.log("selected bag", selectedBagData.value);
@@ -221,55 +223,58 @@ const getTechniker = async () => {
   console.log("techinker", techniker.value);
 };
 
-
 const saveAll = async () => {
   const formdata = new FormData();
   formdata.append("jsondata", JSON.stringify(bags.value));
   const save = await fetchus.postfetch(
     pathconfig.server + pathconfig.updatebag,
     formdata
-    );
-    console.log("saved", save);
-    
-    isBagSelected.value = false;
-  };
-  
-  onMounted(async () => {
-    await getBags();
-    await getTechniker();
-    // await addInitialBag();
-  });
-  
-  const addbag = async () => {
-    let counter = 1;
-    for (const key in bags.value) {
-      if (bags.value.hasOwnProperty(key)) {
-        counter++;
-      }
-    }
-    newbag.bag5.name = counter;
-    console.log("newbag", newbag);
-    console.log("bags1", JSON.parse(JSON.stringify(bags.value)));
-    
-    const newKey = `bag${counter}`;
-    const dynamicNewBag = { [newKey]: newbag.bag5 };
-    bags.value = { ...JSON.parse(JSON.stringify(bags.value)), ...dynamicNewBag };
-    
-    console.log("bags with added", bags.value);
-    await saveAll();
-    await getBags();
-  };
-  
-  const deleteBag = async () => {
-    console.log("delete bag", selectedBagData.value);
-    isBagSelected.value = false;
-  };
+  );
+  console.log("saved", save);
 
-  const addInitialBag = async () => {
-    const b = ref([]);
-    b.value = protocolTemplate;
-    const formdata = new FormData();
-    formdata.append("jsondata", JSON.stringify(b.value));
+  isBagSelected.value = false;
+};
+
+onMounted(async () => {
+  await getBags();
+  await getTechniker();
+  // await addInitialBag();
+});
+
+const addbag = async () => {
+  let counter = 1;
+  for (const key in bags.value) {
+    if (bags.value.hasOwnProperty(key)) {
+      counter++;
+    }
+  }
+  newbag.bag5.name = counter;
+  console.log("newbag", newbag);
+  console.log("bags1", JSON.parse(JSON.stringify(bags.value)));
+
+  const newKey = `bag${counter}`;
+  const dynamicNewBag = { [newKey]: newbag.bag5 };
+  bags.value = { ...JSON.parse(JSON.stringify(bags.value)), ...dynamicNewBag };
+
+  console.log("bags with added", bags.value);
+  await saveAll();
+  await getBags();
+};
+
+const deleteBag = async () => {
+  bags.value = Object.fromEntries(
+    Object.entries(bags.value).filter(([key, value]) => key !== selectedBagKey.value)
+  );
+  isBagSelected.value = false;
+  await saveAll();
+  await getBags();
+};
+
+const addInitialBag = async () => {
+  const b = ref([]);
+  b.value = protocolTemplate;
+  const formdata = new FormData();
+  formdata.append("jsondata", JSON.stringify(b.value));
   const added = await fetchus.postfetch(
     "http://localhost:5070/protocolapp/bag/add",
     formdata

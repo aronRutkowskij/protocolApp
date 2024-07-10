@@ -15,10 +15,11 @@ import {
   faPlus,
   faArrowLeft,
   faTrashCan,
+  faCircleInfo
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faBriefcase, faPlus, faArrowLeft, faTrashCan);
+library.add(faBriefcase, faPlus, faArrowLeft, faTrashCan, faCircleInfo);
 
 import Vue3Signature from "vue3-signature";
 

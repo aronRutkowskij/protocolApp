@@ -20,8 +20,8 @@
     </div>
   </div>
     <div id="bagInfoContainer" class="flex justify-center items-center w-full p-4">
-      <div class="flex flex-row justify-between items-start w-full min-w-max gap-4 rounded-lg p-4 border-4 border-container">
-        <span>Information zur Werkzeugtasche</span>
+      <div id="innerBagInfoContainer" class="flex flex-row justify-between items-center w-full min-w-max gap-4 rounded-lg p-4 border-4 border-container">
+        <font-awesome-icon class="text-4xl" icon="fa-solid fa-circle-info" />
         <CustomInput type="text" v-model="props.bagData.type" :inputValue="props.bagData.type" :inputTitle="'Typ:'" />
         <CustomInput type="text" v-model="props.bagData.modell" :inputValue="props.bagData.modell" :inputTitle="'Marke:'" />
         <CustomInput type="number" v-model="props.bagData.name" :inputValue="props.bagData.name" :inputTitle="'Taschennummer:'" />
